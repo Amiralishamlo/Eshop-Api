@@ -77,6 +77,7 @@ namespace Shop.Domain.UserAgg
         }
         public void ChargeWallet(Wallet wallet)
         {
+            wallet.UserId = Id;
             Wallets.Add(wallet);
         }
         public void SetRoles(List<UserRole> roles)
