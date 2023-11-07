@@ -13,13 +13,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Products\AddImage\" />
-    <Folder Include="Products\Edit\" />
-    <Folder Include="Products\RemoveImage\" />
-    <Folder Include="Users\" />
-    <Folder Include="SiteEntities\" />
-    <Folder Include="Sellers\" />
-    <Folder Include="Roles\" />
+    <Folder Include="SiteEntities\Banners\" />
+    <Folder Include="SiteEntities\Sliders\" />
+    <Folder Include="Users\AddAddress\" />
+    <Folder Include="Users\ChargeWallet\" />
+    <Folder Include="Users\Create\" />
+    <Folder Include="Users\DeleteAddress\" />
+    <Folder Include="Users\Edit\" />
+    <Folder Include="Users\EditAddress\" />
+    <Folder Include="Users\Register\" />
   </ItemGroup>
 
 </Project>
