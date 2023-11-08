@@ -13,11 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Users\AddAddress\" />
     <Folder Include="Users\ChargeWallet\" />
     <Folder Include="Users\DeleteAddress\" />
     <Folder Include="Users\EditAddress\" />
-    <Folder Include="Users\Register\" />
   </ItemGroup>
 
 </Project>
