@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Microsoft.EntityFrameworkCore;
 using Shop.Domain.SellerAgg;
 using Shop.Domain.SellerAgg.Repository;
 using Shop.Infrastructure._Utilities;

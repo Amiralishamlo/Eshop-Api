@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Categories\DTOs\" />
+    <Folder Include="Categories\GetById\" />
+    <Folder Include="Categories\GetByParentId\" />
+    <Folder Include="Categories\GetList\" />
+    <Folder Include="Comments\DTOs\" />
+    <Folder Include="Comments\GetByFilter\" />
+    <Folder Include="Comments\GetById\" />
+    <Folder Include="Orders\DTOs\" />
+    <Folder Include="Orders\GetByFilter\" />
+    <Folder Include="Orders\GetById\" />
+  </ItemGroup>
+
 </Project>
