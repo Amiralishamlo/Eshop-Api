@@ -2,8 +2,7 @@
 
 namespace Common.Domain;
 
-[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
-public class IgnoreMemberAttribute : Attribute
+public partial class IgnoreMemberAttribute : Attribute
 {
 }
 public abstract class BaseValueObject : IEquatable<BaseValueObject>
@@ -29,12 +28,16 @@ public abstract class BaseValueObject : IEquatable<BaseValueObject>
         return !(obj1 == obj2);
     }
 
+#pragma warning disable CS8767 // Nullability of reference types in type of parameter doesn't match implicitly implemented member (possibly because of nullability attributes).
     public bool Equals(BaseValueObject obj)
+#pragma warning restore CS8767 // Nullability of reference types in type of parameter doesn't match implicitly implemented member (possibly because of nullability attributes).
     {
         return Equals(obj as object);
     }
 
+#pragma warning disable CS8765 // Nullability of type of parameter doesn't match overridden member (possibly because of nullability attributes).
     public override bool Equals(object obj)
+#pragma warning restore CS8765 // Nullability of type of parameter doesn't match overridden member (possibly because of nullability attributes).
     {
         if (obj == null || GetType() != obj.GetType()) return false;
 

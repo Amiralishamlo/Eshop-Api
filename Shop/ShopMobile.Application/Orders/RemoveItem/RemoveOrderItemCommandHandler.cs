@@ -15,7 +15,7 @@ namespace Shop.Application.Orders.RemoveItem
         public async Task<OperationResult> Handle(RemoveOrderItemCommand request, CancellationToken cancellationToken)
         {
             var orders = await _orderRepository.GetCurrentUserOrder(request.UserId);
-            if(orders == null)
+            if (orders == null)
                 return OperationResult.NotFound();
             orders.RemoveItem(request.UserId);
             await _orderRepository.Save();

@@ -2,7 +2,7 @@
 
 namespace Shop.Application.Orders.IncreaseItemCount
 {
-    public class IncreaseOrderItemCountCommandValidator:AbstractValidator<IncreaseOrderItemCountCommand>
+    public class IncreaseOrderItemCountCommandValidator : AbstractValidator<IncreaseOrderItemCountCommand>
     {
         public IncreaseOrderItemCountCommandValidator()
         {

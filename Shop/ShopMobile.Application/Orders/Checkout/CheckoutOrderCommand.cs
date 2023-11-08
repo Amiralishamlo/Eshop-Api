@@ -2,7 +2,7 @@
 
 namespace Shop.Application.Orders.Checkout
 {
-    public class CheckoutOrderCommand:IBaseCommand
+    public class CheckoutOrderCommand : IBaseCommand
     {
         public CheckoutOrderCommand(long userId, string shire, string city, string postalCode, string postalAddress, string phoneNumber, string name, string family, string nationalCode)
         {

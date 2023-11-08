@@ -4,7 +4,7 @@ using FluentValidation;
 
 namespace Shop.Application.Sellers.Edit
 {
-    public class EditSellerCommandValidator:AbstractValidator<EditSellerCommand>
+    public class EditSellerCommandValidator : AbstractValidator<EditSellerCommand>
     {
         public EditSellerCommandValidator()
         {

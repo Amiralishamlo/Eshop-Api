@@ -3,7 +3,7 @@ using Common.Domain.Exceptions;
 
 namespace Shop.Domain.ProductAgg
 {
-    public class ProductImage:BaseEntity
+    public class ProductImage : BaseEntity
     {
         public ProductImage(string imageName, int sequence)
         {

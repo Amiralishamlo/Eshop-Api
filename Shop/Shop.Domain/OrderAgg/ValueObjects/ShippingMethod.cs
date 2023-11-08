@@ -2,7 +2,7 @@
 
 namespace Shop.Domain.OrderAgg.ValueObjects
 {
-    public class ShippingMethod:BaseValueObject
+    public class ShippingMethod : BaseValueObject
     {
         public ShippingMethod(string shippingType, int shippingCost)
         {

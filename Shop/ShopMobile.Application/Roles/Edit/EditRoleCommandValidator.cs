@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Shop.Application.Roles.Edit
 {
-    public class EditRoleCommandValidator:AbstractValidator<EditRoleCommand>
+    public class EditRoleCommandValidator : AbstractValidator<EditRoleCommand>
     {
         public EditRoleCommandValidator()
         {

@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Shop.Application.Categories.Edit
 {
-    public class EditCategoryCommandValidator:AbstractValidator<EditCategoryCommand>
+    public class EditCategoryCommandValidator : AbstractValidator<EditCategoryCommand>
     {
         public EditCategoryCommandValidator()
         {

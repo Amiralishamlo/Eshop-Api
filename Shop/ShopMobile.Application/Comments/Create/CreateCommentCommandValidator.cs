@@ -3,13 +3,13 @@ using FluentValidation;
 
 namespace Shop.Application.Comments.Create
 {
-    public class CreateCommentCommandValidator:AbstractValidator<CreateCommentCommand>
+    public class CreateCommentCommandValidator : AbstractValidator<CreateCommentCommand>
     {
         public CreateCommentCommandValidator()
         {
-            RuleFor(x=>x.Text)
+            RuleFor(x => x.Text)
                 .NotNull()
-                .NotEmpty().MinimumLength(5).WithMessage(ValidationMessages.minLength("نظر",5));
+                .NotEmpty().MinimumLength(5).WithMessage(ValidationMessages.minLength("نظر", 5));
         }
     }
 }

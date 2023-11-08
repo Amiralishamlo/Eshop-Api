@@ -1,10 +1,16 @@
 ﻿using Common.Application.FileUtil.Interfaces;
+using Common.Application.Validation;
 using Microsoft.AspNetCore.Http;
-
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Common.Application.FileUtil.Services
 {
-    public class LocalFileService : ILocalFileService
+    public class FileService : IFileService
     {
         public void DeleteDirectory(string directoryPath)
         {
@@ -54,7 +60,6 @@ namespace Common.Application.FileUtil.Services
                                           .Replace(":", "")
                                           .Replace(".", "") + Path.GetExtension(fileName);
 
-
             var folderName = Path.Combine(Directory.GetCurrentDirectory(), directoryPath.Replace("/", "\\"));
             if (!Directory.Exists(folderName))
                 Directory.CreateDirectory(folderName);
@@ -63,7 +68,6 @@ namespace Common.Application.FileUtil.Services
 
             using var stream = new FileStream(path, FileMode.Create);
             await file.CopyToAsync(stream);
-
             return fileName;
         }
     }

@@ -2,7 +2,7 @@
 
 namespace Shop.Application.Orders.AddItem
 {
-    public class AddOrderItemCommandValidator:AbstractValidator<AddOrderItemCommand> 
+    public class AddOrderItemCommandValidator : AbstractValidator<AddOrderItemCommand>
     {
         public AddOrderItemCommandValidator()
         {

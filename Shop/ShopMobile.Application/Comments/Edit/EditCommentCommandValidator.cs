@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Shop.Application.Comments.Edit
 {
-    public class EditCommentCommandValidator:AbstractValidator<EditCommentCommand>
+    public class EditCommentCommandValidator : AbstractValidator<EditCommentCommand>
     {
         public EditCommentCommandValidator()
         {

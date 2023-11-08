@@ -14,8 +14,8 @@ namespace Shop.Application.Comments.Edit
 
         public async Task<OperationResult> Handle(EditCommentCommand request, CancellationToken cancellationToken)
         {
-            var comment=await _commentRepository.GetTracking(request.CommentId);
-            if (comment == null || comment.UserId!=request.UserId)
+            var comment = await _commentRepository.GetTracking(request.CommentId);
+            if (comment == null || comment.UserId != request.UserId)
                 return OperationResult.NotFound();
             comment.Edit(comment.Text);
             await _commentRepository.Save();

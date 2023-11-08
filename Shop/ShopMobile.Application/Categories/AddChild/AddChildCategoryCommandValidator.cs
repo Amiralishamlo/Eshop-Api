@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Shop.Application.Categories.AddChild
 {
-    public class AddChildCategoryCommandValidator:AbstractValidator<AddChildCategoryCommand>
+    public class AddChildCategoryCommandValidator : AbstractValidator<AddChildCategoryCommand>
     {
         public AddChildCategoryCommandValidator()
         {

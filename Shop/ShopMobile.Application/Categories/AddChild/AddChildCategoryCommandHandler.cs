@@ -1,6 +1,6 @@
 ﻿using Common.Application;
-using Shop.Domain.CategoryAgg.Services;
 using Shop.Domain.CategoryAgg;
+using Shop.Domain.CategoryAgg.Services;
 
 namespace Shop.Application.Categories.AddChild
 {
@@ -16,12 +16,12 @@ namespace Shop.Application.Categories.AddChild
         }
         public async Task<OperationResult> Handle(AddChildCategoryCommand request, CancellationToken cancellationToken)
         {
-            var category =await _repository.GetTracking(request.ParentId);
+            var category = await _repository.GetTracking(request.ParentId);
             if (category == null)
                 return OperationResult.NotFound();
             category.AddChild(request.Title, request.Slug, request.SeoData, _domainServicer);
             await _repository.Save();
             return OperationResult.Success();
-        } 
+        }
     }
 }

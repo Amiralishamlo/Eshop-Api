@@ -1,6 +1,6 @@
 ﻿using Common.Application;
-using Shop.Domain.CategoryAgg.Services;
 using Shop.Domain.CategoryAgg;
+using Shop.Domain.CategoryAgg.Services;
 
 namespace Shop.Application.Categories.Edit
 {

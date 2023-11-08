@@ -4,7 +4,7 @@ using Shop.Domain.OrderAgg.ValueObjects;
 
 namespace Shop.Domain.OrderAgg
 {
-    public class Order:AggregateRoot
+    public class Order : AggregateRoot
     {
         private Order()
         {
@@ -18,9 +18,9 @@ namespace Shop.Domain.OrderAgg
             Items = new List<OrderItem>();
         }
 
-        public long UserId { get;private set; }
+        public long UserId { get; private set; }
 
-        public OrderStatus Status { get;private set; }
+        public OrderStatus Status { get; private set; }
 
         public OrderDiscount? Discount { get; private set; }
 
@@ -36,7 +36,7 @@ namespace Shop.Domain.OrderAgg
 
         public int TotalPrice
         {
-            get 
+            get
             {
                 var totalPrice = Items.Sum(f => f.TotalPrice);
 
@@ -57,17 +57,17 @@ namespace Shop.Domain.OrderAgg
             var orderItems = Items.FirstOrDefault(x => x.InventoryId == Item.InventoryId);
             if (orderItems != null)
             {
-                orderItems.ChangeCount(Item.Count+orderItems.Count);
+                orderItems.ChangeCount(Item.Count + orderItems.Count);
                 return;
             }
             Items.Add(Item);
         }
 
-        public void RemoveItem(long  itemId)
+        public void RemoveItem(long itemId)
         {
             ChangeOrderGuard();
-            var currentItem= Items.FirstOrDefault(x => x.Id == itemId);
-            if(currentItem != null)
+            var currentItem = Items.FirstOrDefault(x => x.Id == itemId);
+            if (currentItem != null)
                 Items.Remove(currentItem);
         }
 
@@ -94,7 +94,7 @@ namespace Shop.Domain.OrderAgg
         }
         public void ChangeCountItem(long itemId, int newCount)
         {
-            ChangeOrderGuard();  
+            ChangeOrderGuard();
             var currentItem = Items.FirstOrDefault(f => f.Id == itemId);
             if (currentItem == null)
                 throw new NullOrEmptyDomainDataException();

@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Shop.Application.Categories.Create
 {
-    public class CreateCategoryCommandValidator:AbstractValidator<CreateCategoryCommand>
+    public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCommand>
     {
         public CreateCategoryCommandValidator()
         {
@@ -13,5 +13,5 @@ namespace Shop.Application.Categories.Create
             RuleFor(r => r.Slug)
                 .NotEmpty().NotNull().WithMessage(ValidationMessages.required("slug"));
         }
-    } 
+    }
 }

@@ -20,7 +20,7 @@ namespace Shop.Application.Roles.Create
                 permissions.Add(new RolePermission(f));
             });
             var role = new Role(request.Title, permissions);
-            await _repository.Add(role);
+            _repository.Add(role);
             await _repository.Save();
 
             return OperationResult.Success();

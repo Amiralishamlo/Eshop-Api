@@ -3,7 +3,7 @@ using Shop.Domain.RoleAgg.Enums;
 
 namespace Shop.Domain.RoleAgg
 {
-    public class RolePermission:BaseEntity
+    public class RolePermission : BaseEntity
     {
         public RolePermission(Permission permission)
         {

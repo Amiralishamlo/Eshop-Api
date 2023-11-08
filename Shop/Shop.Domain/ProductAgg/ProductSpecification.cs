@@ -3,7 +3,7 @@ using Common.Domain.Exceptions;
 
 namespace Shop.Domain.ProductAgg
 {
-    public class ProductSpecification: BaseEntity
+    public class ProductSpecification : BaseEntity
     {
         public ProductSpecification(string key, string value)
         {

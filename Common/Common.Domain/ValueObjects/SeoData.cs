@@ -1,6 +1,6 @@
 ﻿namespace Common.Domain.ValueObjects
 {
-    public class SeoData : BaseValueObject
+    public class SeoData : ValueObject
     {
         private SeoData()
         {

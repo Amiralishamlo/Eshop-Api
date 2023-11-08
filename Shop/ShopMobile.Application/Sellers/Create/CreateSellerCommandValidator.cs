@@ -4,7 +4,7 @@ using FluentValidation;
 
 namespace Shop.Application.Sellers.Create
 {
-    public class CreateSellerCommandValidator:AbstractValidator<CreateSellerCommand>
+    public class CreateSellerCommandValidator : AbstractValidator<CreateSellerCommand>
     {
         public CreateSellerCommandValidator()
         {

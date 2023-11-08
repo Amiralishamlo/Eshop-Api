@@ -3,7 +3,7 @@ using Common.Domain.Exceptions;
 
 namespace Shop.Domain.CommentAgg
 {
-    public class Comment:AggregateRoot
+    public class Comment : AggregateRoot
     {
         public long UserId { get; private set; }
         public long ProductId { get; private set; }

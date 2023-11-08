@@ -1,10 +1,10 @@
-﻿using Common.Application.Validation.FluentValidations;
-using Common.Application.Validation;
+﻿using Common.Application.Validation;
+using Common.Application.Validation.FluentValidations;
 using FluentValidation;
 
 namespace Shop.Application.Products.Create
 {
-    public class CreateProductCommandValidator:AbstractValidator<CreateProductCommand>
+    public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
     {
         public CreateProductCommandValidator()
         {

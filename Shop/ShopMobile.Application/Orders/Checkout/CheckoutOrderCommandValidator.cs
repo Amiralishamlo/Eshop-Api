@@ -51,7 +51,7 @@ namespace Shop.Application.Orders.Checkout
              .WithMessage(ValidationMessages.required("کد ملی"))
              .MaximumLength(10).WithMessage(" کدملی نامعتبر است")
              .MinimumLength(10).WithMessage("کدملی نامعتبر است")
-             .ValidNationalId();  
+             .ValidNationalId();
         }
     }
 }

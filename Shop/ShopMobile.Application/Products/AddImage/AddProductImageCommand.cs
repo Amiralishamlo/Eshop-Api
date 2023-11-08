@@ -10,7 +10,7 @@ using Shop.Domain.ProductAgg.Repository;
 
 namespace Shop.Application.Products.AddImage
 {
-    public class AddProductImageCommand:IBaseCommand
+    public class AddProductImageCommand : IBaseCommand
     {
         public AddProductImageCommand(IFormFile imageFile, long productId, int sequence)
         {
@@ -26,9 +26,9 @@ namespace Shop.Application.Products.AddImage
     public class AddProductImageCommandHandler : IBaseCommandHandler<AddProductImageCommand>
     {
         private readonly IProductRepository _repository;
-        private readonly ILocalFileService _fileService;
+        private readonly IFileService _fileService;
 
-        public AddProductImageCommandHandler(IProductRepository repository, ILocalFileService fileService)
+        public AddProductImageCommandHandler(IProductRepository repository, IFileService fileService)
         {
             _repository = repository;
             _fileService = fileService;
@@ -49,7 +49,7 @@ namespace Shop.Application.Products.AddImage
             return OperationResult.Success();
         }
     }
-    public class AddProductImageCommandValidator:AbstractValidator<AddProductImageCommand>
+    public class AddProductImageCommandValidator : AbstractValidator<AddProductImageCommand>
     {
         public AddProductImageCommandValidator()
         {

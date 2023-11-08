@@ -2,7 +2,7 @@
 
 namespace Shop.Domain.OrderAgg.ValueObjects
 {
-    public class OrderDiscount: BaseValueObject
+    public class OrderDiscount : BaseValueObject
     {
         public string DiscountTitle { get; private set; }
         public int DiscountAmount { get; private set; }

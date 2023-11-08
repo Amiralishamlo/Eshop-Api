@@ -14,7 +14,7 @@ namespace Shop.Application.Comments.ChangeStatus
 
         public async Task<OperationResult> Handle(ChangeCommentStatusCommand request, CancellationToken cancellationToken)
         {
-            var comment=await _commentRepository.GetTracking(request.Id);
+            var comment = await _commentRepository.GetTracking(request.Id);
             if (comment == null)
                 return OperationResult.NotFound();
             comment.ChangeStatus(request.Status);

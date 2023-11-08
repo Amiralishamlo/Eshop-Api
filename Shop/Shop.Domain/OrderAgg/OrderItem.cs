@@ -3,7 +3,7 @@ using Common.Domain.Exceptions;
 
 namespace Shop.Domain.OrderAgg
 {
-    public class OrderItem:BaseEntity
+    public class OrderItem : BaseEntity
     {
         public OrderItem(long inventoryId, int count, int price)
         {

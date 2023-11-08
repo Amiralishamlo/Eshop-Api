@@ -11,9 +11,9 @@ namespace Shop.Application.Products.Create
     {
         private readonly IProductDomainService _domainService;
         private readonly IProductRepository _productRepository;
-        private readonly ILocalFileService _localFileService;
+        private readonly IFileService _localFileService;
 
-        public CreateProductCommandHandler(IProductDomainService domainService, IProductRepository productRepository, ILocalFileService localFileService)
+        public CreateProductCommandHandler(IProductDomainService domainService, IProductRepository productRepository, IFileService localFileService)
         {
             _domainService = domainService;
             _productRepository = productRepository;
@@ -27,7 +27,7 @@ namespace Shop.Application.Products.Create
                 request.SubCategoryId, request.SecondarySubCategoryId, _domainService, request.Slug,
                 request.SeoData);
 
-            await _productRepository.Add(product);
+            _productRepository.Add(product);
 
             var specifications = new List<ProductSpecification>();
             request.Specifications.ToList().ForEach(specification =>

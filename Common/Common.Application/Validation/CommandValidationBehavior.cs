@@ -1,4 +1,9 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using FluentValidation;
 using MediatR;
 
@@ -35,11 +40,6 @@ namespace Common.Application.Validation
             }
             var response = await next();
             return response;
-        }
-
-        public Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
         }
     }
 }

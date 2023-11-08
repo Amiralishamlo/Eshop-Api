@@ -3,7 +3,7 @@ using Common.Domain.Exceptions;
 
 namespace Shop.Domain.SiteEntities
 {
-    public class Slider:BaseEntity
+    public class Slider : BaseEntity
     {
         public string Title { get; private set; }
         public string Link { get; private set; }

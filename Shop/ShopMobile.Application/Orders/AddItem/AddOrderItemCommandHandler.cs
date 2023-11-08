@@ -18,11 +18,11 @@ namespace Shop.Application.Orders.AddItem
 
         public async Task<OperationResult> Handle(AddOrderItemCommand request, CancellationToken cancellationToken)
         {
-            var inventory=await _sellerRepository.GetInventoryById(request.InventoryId);
+            var inventory = await _sellerRepository.GetInventoryById(request.InventoryId);
             if (inventory == null)
                 return OperationResult.NotFound();
 
-            if(inventory.Count < request.Count)
+            if (inventory.Count < request.Count)
                 return OperationResult.Error("تعداد محصولات موجود کمتر از حد درخواستی است.");
 
             var order = await _orderRepository.GetCurrentUserOrder(request.UserId);

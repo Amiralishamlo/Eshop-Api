@@ -1,10 +1,10 @@
-﻿using Common.Application.Validation.FluentValidations;
-using Common.Application.Validation;
+﻿using Common.Application.Validation;
+using Common.Application.Validation.FluentValidations;
 using FluentValidation;
 
 namespace Shop.Application.Products.Edit
 {
-    public class EditProductCommandValidator:AbstractValidator<EditProductCommand>
+    public class EditProductCommandValidator : AbstractValidator<EditProductCommand>
     {
         public EditProductCommandValidator()
         {

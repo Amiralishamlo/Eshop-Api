@@ -2,7 +2,7 @@
 
 namespace Shop.Domain.OrderAgg
 {
-    public class OrderAddress:BaseEntity
+    public class OrderAddress : BaseEntity
     {
         public OrderAddress(string shire, string city, string postalCode, string postalAddress,
             string phoneNumber, string name, string family, string nationalCode)
