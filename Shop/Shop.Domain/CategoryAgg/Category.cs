@@ -8,6 +8,10 @@ namespace Shop.Domain.CategoryAgg
 {
     public class Category : AggregateRoot
     {
+        private Category()
+        {
+            Childs = new List<Category>();
+        }
         public Category(string title, string slug, SeoData seoData, ICategoryDomainService service)
         {
             slug = slug?.ToSlug();
@@ -15,8 +19,8 @@ namespace Shop.Domain.CategoryAgg
             Title = title;
             Slug = slug;
             SeoData = seoData;
+            Childs = new List<Category>();
         }
-
 
         public string Title { get; private set; }
         public string Slug { get; private set; }
@@ -33,7 +37,6 @@ namespace Shop.Domain.CategoryAgg
             SeoData = seoData;
         }
 
-
         public void AddChild(string title, string slug, SeoData seoData, ICategoryDomainService service)
         {
             Childs.Add(new Category(title, slug, seoData, service)
@@ -41,8 +44,6 @@ namespace Shop.Domain.CategoryAgg
                 ParentId = Id
             });
         }
-
-
 
         public void Guard(string title, string slug, ICategoryDomainService service)
         {

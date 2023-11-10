@@ -16,6 +16,8 @@ using Shop.Infrastructure.Persistent.Ef.RoleAgg;
 using Shop.Infrastructure.Persistent.Ef.SellerAgg;
 using Shop.Infrastructure.Persistent.Ef.SiteEntities.Repositories;
 using Shop.Infrastructure.Persistent.Ef.UserAgg;
+using Shop.Domain.CommentAgg;
+using Shop.Infrastructure.Persistent.Ef.CommentAgg;
 
 namespace Shop.Infrastructure;
 
@@ -31,7 +33,7 @@ public class InfrastructureBootstrapper
         services.AddTransient<IBannerRepository, BannerRepository>();
         services.AddTransient<ISliderRepository, SliderRepository>();
         services.AddTransient<IUserRepository, UserRepository>();
-
+        services.AddTransient<ICommentRepository, CommentRepository>();
 
         services.AddTransient(_ => new DapperContext(connectionString));
         services.AddDbContext<ShopContext>(option =>

@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Persistent.Dapper\" />
+    <Folder Include="Persistent.Ef\CommentAgg\" />
   </ItemGroup>
 
   <ItemGroup>

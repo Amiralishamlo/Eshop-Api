@@ -25,7 +25,6 @@
     <Folder Include="SiteEntities\DTOs\" />
     <Folder Include="SiteEntities\Banners\" />
     <Folder Include="SiteEntities\Sliders\" />
-    <Folder Include="Orders\DTOs\" />
     <Folder Include="Orders\GetByFilter\" />
     <Folder Include="Orders\GetById\" />
     <Folder Include="Users\DTOs\" />
